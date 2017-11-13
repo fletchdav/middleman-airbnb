@@ -1,0 +1,76 @@
+<% flat = data.flats[owner] %>
+
+<div id="show">
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
+  </div>
+
+  <div class="flat-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+          <div class="flatcard">
+            <div class="flatcard-user">
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle" %>
+              <p><%=owner%></p>
+            </div>
+            <div class="flatcard-details">
+              <h1><%= flat.description %></h1>
+              <h2><%= flat.city_name %></p>
+              <div class="list-inline">
+                <%flat.rating.times do %>
+                <li> <i class="fa fa-star"></i> </li>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <form action="#">
+            <h4>Book this flat</h4>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <input type="text" class="form-control" placeholder="checkin" id="checkin">
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <input type="text" class="form-control" placeholder="checkout">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <select name="" id="guests" class="form-control">
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+              </select>
+            </div>
+            <input type="submit" class="btn btn-danger" value="Book it" style="width: 100%">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="description">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <div class="complete-description">
+            <h2>About this flat</h2>
+            <p><%= flat.complete_description %></p>
+          </div>
+          <div class="specificities">
+            <div class="space"><p>The Space: </p></div>
+            <div class="specificities-list">
+              <% if flat.wifi %>
+                <i class="fa fa-wifi"><strong> Wifi </strong></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

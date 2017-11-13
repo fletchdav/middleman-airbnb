@@ -1,0 +1,44 @@
+#show {
+  .banner {
+    height: 50vh;
+    background-position: center;
+  }
+  form {
+    background-color: $light-gray;
+    padding: 10px;
+  }
+  .description {
+    background-color: $light-gray;
+    margin-top: 50px;
+  }
+}
+
+
+.specificities {
+  display: flex;
+  align-items: left
+}
+
+.space {
+  padding-right: 20px;
+}
+
+.complete-description {
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.specificities {
+   border-bottom: 1px solid rgba(0,0,0,0.1);
+   padding: 10px 0px;
+   margin-bottom: 0px;
+   font-weight: bolder;
+   font-size: 14px;
+   p {
+    margin-bottom: 0px;
+   }
+}

@@ -1,0 +1,35 @@
+.flatcard {
+  display: flex;
+  align-items: center;
+  height : 200px;
+  p {
+    font-size: 15px;
+  }
+}
+
+.flatcard-user {
+  text-align: center;
+  margin: 0px 0px;
+}
+
+.flatcard-details {
+  text-align: left;
+  margin: 0px 0px;
+  padding-left: 30px;
+  h1 {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+  h2 {
+    font-size: 15px;
+    font-color: $light-gray;
+  }
+  i {
+    color: $yellow;
+  }
+}
+
+.img-circle {
+  height: 100px;
+}
+
